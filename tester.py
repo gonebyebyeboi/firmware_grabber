@@ -1,4 +1,4 @@
-index_html = """<!-- 
+index_html="""<!-- 
 EMBA - EMBEDDED LINUX ANALYZER
 
 Copyright 2020-2023 Siemens AG
@@ -228,17 +228,31 @@ document.onkeydown = function(e) {
 </body>
 </html>
 """
-
 from bs4 import BeautifulSoup
 
-def get_lines(html_content, tag, keyword):
-    soup = BeautifulSoup(index_html, 'html.parser')
-    text = soup.stripped_strings
-    print(text)
-    
-    return text
+#Target: Tested firmware:</span><span class="orange"> /var/www/active/0427922f-f9b3-4baf-83d8-3548f2de25c1/DIS-200G-SERIES_REVA_FIRMWARE_v1.20.007.zip</span></span></pre>
+def parser(soup):
+  firmware = soup.find_all('span', class_= "orange")
+  firmware = list(firmware)
+  data = []
+  for item in firmware:
+    item = str(item)
+    data.append(item)
+  
+  answer = ""
+  for item in data:
+    if "emba" in item:
+      answer = item
+  
+  answer = answer.replace("""<span class="orange">""", '')
+  answer = answer.split('/')
+  for item in answer:
+    if ".zip" in item:
+      print(item)
+  
+  
+  
 
-result = get_lines(index_html, 'pre', "Tested firmware")
 
-print(result)
-
+soup = BeautifulSoup(index_html, 'html.parser')
+parser(soup)
