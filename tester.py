@@ -250,9 +250,5 @@ def parser(soup):
     if ".zip" in item:
       print(item)
   
-  
-  
-
-
 soup = BeautifulSoup(index_html, 'html.parser')
 parser(soup)
