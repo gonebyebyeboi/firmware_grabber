@@ -1,4 +1,6 @@
 # firm_grabber
-This is a test repo that I will try to use to keep track of a script I'm writing to pull firmware image names off EMBA html reports
+There are requirements for this parser to work, but I haven't created the README as of yet.
 
-Note that this is still being worked on
+The Grabbers are ordered in Marks, meaning mark one is my first attempt. Second mark is my second attempt, and so on.
+I tried to implement new methodologies of getting the information I needed, with more luck with some than others.
+
