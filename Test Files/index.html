@@ -35,18 +35,14 @@ Author(s) and contributors from the EMBA project are listed here: https://github
       <a class="backButton hidden" href="./index.html">&laquo; Back to main</a>
       <!-- navigation start -->
 <a class="modul p" data="p02" href="./p02_firmware_bin_file_check.html" title="./p02_firmware_bin_file_check.html">Binary firmware file analyzer</a>
-<a class="modul p" data="p05" href="./p05_patools_init.html" title="./p05_patools_init.html">Initial extractor of different archive types via patools</a>
-<a class="modul p" data="p60" href="./p60_deep_extractor.html" title="./p60_deep_extractor.html">Binary firmware deep extractor</a>
-<a class="modul p" data="p61" href="./p61_binwalk_extractor.html" title="./p61_binwalk_extractor.html">Binwalk binary firmware extractor (backup mode)</a>
+<a class="modul p" data="p55" href="./p55_unblob_extractor.html" title="./p55_unblob_extractor.html">Unblob binary firmware extractor</a>
 <a class="modul p" data="p99" href="./p99_prepare_analyzer.html" title="./p99_prepare_analyzer.html">Analysis preparation</a>
-<a class="modul s" data="s03" href="./s03_firmware_bin_base_analyzer.html" title="./s03_firmware_bin_base_analyzer.html">Binary firmware basic analyzer</a>
-<a class="modul s" data="s05" href="./s05_firmware_details.html" title="./s05_firmware_details.html">Firmware and testing details</a>
-<a class="modul s" data="s09" href="./s09_firmware_base_version_check.html" title="./s09_firmware_base_version_check.html">Static binary firmware versions detection</a>
+<a class="modul s" data="s35" href="./s35_http_file_check.html" title="./s35_http_file_check.html">Check HTTP files</a>
+<a class="modul s" data="s45" href="./s45_pass_file_check.html" title="./s45_pass_file_check.html">Search password files</a>
+<a class="modul s" data="s95" href="./s95_interesting_files_check.html" title="./s95_interesting_files_check.html">Check for interesting files</a>
+<a class="modul s" data="s107" href="./s107_deep_password_search.html" title="./s107_deep_password_search.html">Deep analysis of files for password hashes</a>
 <a class="modul s" data="s108" href="./s108_stacs_password_search.html" title="./s108_stacs_password_search.html">Stacs analysis of firmware for password hashes</a>
-<a class="modul s" data="s109" href="./s109_jtr_local_pw_cracking.html" title="./s109_jtr_local_pw_cracking.html">Cracking identified password hashes</a>
-<a class="modul f" data="f10" href="./f10_license_summary.html" title="./f10_license_summary.html">License inventory</a>
-<a class="modul f" data="f20" href="./f20_vul_aggregator.html" title="./f20_vul_aggregator.html">Final vulnerability aggregator</a>
-<a class="modul f" data="f21" href="./f21_cyclonedx_sbom.html" title="./f21_cyclonedx_sbom.html">CycloneDX SBOM converter</a>
+<a class="modul f" data="f02" href="./f02_toolchain.html" title="./f02_toolchain.html">Toolchain overview</a>
 <a class="modul f" data="f50" href="./f50_base_aggregator.html" title="./f50_base_aggregator.html">Final aggregator</a>
       <!-- navigation end -->
       <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
@@ -65,24 +61,16 @@ Author(s) and contributors from the EMBA project are listed here: https://github
 <pre>The main aggregator module compiles and summarizes results from various analysis modules into a comprehensive overview by processing and logging detailed information from each identified element.</pre>
 <br />
 <br />
-<pre>[</span><span class="green">+</span>]</span><span class="green"> Tested Firmware vendor: </span><span class="orange">''</span></span></pre>
-<pre>[</span><span class="green">+</span>]</span><span class="green"> Tested Firmware from device: </span><span class="orange">''</span></span></pre>
-<pre>[</span><span class="green">+</span>]</span><span class="green"> Tested firmware:</span><span class="orange"> /var/www/active/0427922f-f9b3-4baf-83d8-3548f2de25c1/DIS-200G-SERIES_REVA_FIRMWARE_v1.20.007.zip</span></span></pre>
-<pre>[</span><span class="green">+</span>]</span><span class="green"> EMBA start command:</span><span class="orange"> /var/www/emba/emba -p ./scan-profiles/default-scan-no-notify.emba -f /var/www/active/0427922f-f9b3-4baf-83d8-3548f2de25c1/DIS-200G-SERIES_REVA_FIRMWARE_v1.20.007.zip -l /var/www/emba_logs/0427922f-f9b3-4baf-83d8-3548f2de25c1/emba_logs -Z  -Y </span></span></pre>
-<a class="refmodul" href="./s03_firmware_bin_base_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Detected architecture:</span><span class="orange"> ARM / </span></span></pre></a>
-
-<a class="refmodul" href="./s03_firmware_bin_base_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Possible operating system detected (</span><span class="orange">unverified</span><span class="green">): </span><span class="orange">eCos - #250755</span></span></pre></a>
-
-<a class="refmodul" href="./s03_firmware_bin_base_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Possible operating system detected (</span><span class="orange">unverified</span><span class="green">): </span><span class="orange">VxWorks - #112677</span></span></pre></a>
-
-<a class="refmodul" href="./s03_firmware_bin_base_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Possible operating system detected (</span><span class="orange">unverified</span><span class="green">): </span><span class="orange">Linux - #49</span></span></pre></a>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Tested firmware:</span><span class="orange"> /home/utsa/emba/Firmware/keenetic/0fed25b8f68b8b9dc5dd9387e931339b</span></span></pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> EMBA start command:</span><span class="orange"> ./emba -p scan-profiles/default-scan_minimum_modules.emba -f ./Firmware/keenetic/0fed25b8f68b8b9dc5dd9387e931339b -l ./working/0fed25b8f68b8b9dc5dd9387e931339b/1726196275 -g -r</span></span></pre>
+<a class="refmodul" href="./p99_prepare_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Detected architecture and endianness (</span><span class="orange">verified</span><span class="green">):</span><span class="orange"> MIPS R3000 / BE</span></span></pre></a>
 
 <br />
 <pre><hr class="mono" /></pre>
 <br />
-<a class="refmodul" href="./s05_firmware_details.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> </span><span class="orange">3766</span><span class="green"> files and </span><span class="orange">8947 </span><span class="green">directories detected.</span></pre></a>
+<a class="refmodul" href="./p99_prepare_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> </span><span class="orange">1637</span><span class="green"> files and </span><span class="orange">264 </span><span class="green">directories detected.</span></pre></a>
 
-<a class="refmodul" href="./p02_firmware_bin_file_check.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Entropy analysis of binary firmware is: </span><span class="orange">7.995628 bits per byte.</span></pre></a>
+<a class="refmodul" href="./p02_firmware_bin_file_check.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Entropy analysis of binary firmware is: </span><span class="orange">7.989425 bits per byte.</span></pre></a>
 
 <pre>[</span><span class="green">+</span>]</span><span class="green"> Entropy analysis of binary firmware is available:</span><span class="orange"> /logs/firmware_entropy.png</span></pre>
 <img class="image" src="./style/firmware_entropy.png">
@@ -90,33 +78,12 @@ Author(s) and contributors from the EMBA project are listed here: https://github
 <pre><hr class="mono" /></pre>
 <br />
 <pre>[</span><span class="green">+</span>]</span><span class="green"> Found the following configuration issues:</span></pre>
-<a class="refmodul" href="./s108_stacs_password_search.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">48</span><span class="green"> password related details via STACS.</span></pre></a>
+<a class="refmodul" href="./s107_deep_password_search.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">1</span><span class="green"> password related details.</span></pre></a>
 
-<br />
-<pre><hr class="mono" /></pre>
-<br />
-<a class="refmodul" href="./f20_vul_aggregator.html#anchor_softwareinventoryinitialoverview" title="LINK" ><pre>[</span><span class="orange">*</span>] Identified the following software inventory, vulnerabilities and exploits:</pre></a>
+<a class="refmodul" href="./s108_stacs_password_search.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">3</span><span class="green"> password related details via STACS.</span></pre></a>
 
-<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_jq" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	jq                  :   7              :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+<a class="refmodul" href="./s95_interesting_files_check.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">0</span><span class="green"> interesting files and </span><span class="orange">2</span><span class="green"> files that could be useful for post-exploitation.</span></pre></a>
 
-<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_jquery" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	jquery              :   1.8.3          :   CVEs: 15        :   Exploits: 4    :   Source: STAT           </span></pre></a>
-
-<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_openssl" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	openssl             :   1.0.1g         :   CVEs: 76        :   Exploits: 9    :   Source: STAT           </span></pre></a>
-
-<br />
-<br />
-<a class="refmodul" href="./f21_cyclonedx_sbom.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Identified a SBOM including </span><span class="orange">3</span><span class="green"> software components with version details.</span></pre></a>
-
-<br />
-<br />
-<a class="refmodul" href="./f20_vul_aggregator.html#anchor_collectcveandexploitdetails" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Identified </span><span class="orange">91</span><span class="green"> CVE entries.</span></pre></a>
-
-<pre>    </span><span class="green">Identified </span><span class="red"><span class="bold">24</span></span><span class="green"> High rated CVE entries / Exploits: </span><span class="orange">4</span></span></pre>
-<pre>    </span><span class="green">Identified </span><span class="orange"><span class="bold">65</span></span><span class="green"> Medium rated CVE entries / Exploits: </span><span class="orange">8</span></span></pre>
-<pre>    </span><span class="green">Identified </span><span class="green"><span class="bold">2</span></span><span class="green"> Low rated CVE entries /Exploits: </span><span class="orange">1</span></span></pre>
-<a class="refmodul" href="./f20_vul_aggregator.html#anchor_minimalreportofexploitsandcves" title="LINK" ><pre>    </span><span class="green"></span><span class="magenta"><span class="bold">13</span></span><span class="green"> possible exploits available (</span><span class="magenta">6</span><span class="green"> Metasploit modules).</span></pre></a>
-
-<pre>    </span><span class="green">Remote exploits: </span><span class="magenta"><span class="bold">0</span></span><span class="green"> / Local exploits: </span><span class="magenta"><span class="bold">0</span></span><span class="green"> / DoS exploits: </span><span class="magenta"><span class="bold">1</span></span><span class="green"> / Github PoCs: </span><span class="magenta"><span class="bold">0</span></span><span class="green"> / Known exploited vulnerabilities: </span><span class="magenta"><span class="bold">0</span><span class="green"> / Verified Exploits: </span><span class="magenta"><span class="bold">0</span></span></pre>
 <br />
 <pre><hr class="mono" /></pre>
 <br />

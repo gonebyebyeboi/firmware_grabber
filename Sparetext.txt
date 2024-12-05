@@ -1,0 +1,53 @@
+#                                                                               HEX                         Number/emba_logs    folder                        
+  #Path: /home/daclocaladmin/Documents/Data_Analytics_I/Whole_Emba_Collection/000ddfaf591c2853d7a46acb8af69c33/1726336310/html-report
+  
+  """Manual Testing Block"""
+  # #With extension
+  # with open("/home/daclocaladmin/Documents/Data_Analytics_I/firm_name_grabber/firm_grabber-main/Test Files/index.html", 'r') as f:
+  #   contents = f.read()
+  #   index_html = bs(contents, 'lxml')
+    
+  #   parser(index_html)
+    
+  #   print(dfResult)
+  
+  #without extension
+  # with open("/home/daclocaladmin/Documents/Data_Analytics_I/Whole_Emba_Collection/e9ea6138ef11c95211d304a8ea6e3a3a/1726186758/html-report/index.html", 'r') as f:
+  #   contents = f.read()
+  #   index_html = bs(contents, 'lxml')
+  #   parser(index_html)
+  #   print(dfResult)
+  
+  
+    #This for troubleshooting paths it didn't correctly identify or may have messed up
+  # for i in range(len(trouble)):
+  #   print(trouble[i])
+  #   print("To see the next path press a key:\n")
+  
+  
+  #Writes the resulting dataframe to an .csv file
+  #dfResult.to_csv("/home/daclocaladmin/Documents/Data_Analytics_I/firm_name_grabber/firm_grabber-main/Output/UsableResults.csv", index=False)
+  
+  #keenetic.to_csv("/home/daclocaladmin/Documents/Data_Analytics_I/firm_name_grabber/firm_grabber-main/Output/KeeneticsResults.csv",index=False)
+
+
+
+  #os list for loop 
+  try:
+      for var1 in os.listdir(bp):
+        var1path = os.path.join(bp, var1)
+        if os.path.isdir(var1path):
+          for var2 in os.listdir(var1path):
+            var2path=os.path.join(var1path, var2)
+            if os.path.isdir(var2path):
+              html_report_path = os.path.join(var2path, "html-report")
+              if os.path.isdir(html_report_path):
+                for file in os.listdir(html_report_path):
+                  if file == "index.html":
+                    file_path=os.path.join(html_report_path, file)
+                    if os.path.isfile(file_path):
+                      masterFilepaths.append((file_path))
+                  
+                      
+  except:
+    print("Issue reading file path!!!")
