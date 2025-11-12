@@ -1,6 +1,8 @@
-# firm_grabber
-There are requirements for this parser to work, but I haven't created the README as of yet.
+# UNDER DEVELOPMENT
 
-The Grabbers are ordered in Marks, meaning mark one is my first attempt. Second mark is my second attempt, and so on.
-I tried to implement new methodologies of getting the information I needed, with more luck with some than others.
+There are requirements for this parser to work, but I haven't created the README as of yet.
+This parser is designed to grab firmware image names from resulting scans from the EMBA Firmware analysis tool.
+
+The Grabbers are ordered in Marks, meaning mark one is the first attempt. Second mark is the second attempt, and so on.
+
 
