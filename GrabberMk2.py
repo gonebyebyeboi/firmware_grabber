@@ -1,8 +1,9 @@
 
 from bs4 import BeautifulSoup
 import pandas as pd
-#Note, change directory to match emba scan
-with open('C:\Development\Research\CA1\Firm_grabber\Test Files\index.html', 'r') as f:
+
+#Note, change directory to match EMBA Scan Repository
+with open() as f:
     
     contents = f.read()
     
