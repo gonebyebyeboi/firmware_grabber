@@ -1,7 +1,8 @@
-# INCOMPLETE PROGRAM
+# EMBA Tool Firmware Name Grabber
+This project is a Python script that looks through completed EMBA scans of firmware, and searches for the names of the firmware. This tool was built because some of the names of the firmware didn't show up in the completed scans that were ran. It returns a dictionary that details the name of the firmware, along with the Hex GUID, so that specific results for firmware can be found in the base directory.
 
-This program is designed to run as a parser for the EMBA Firmware Analysis tool. It parses through completed scan files for HTML files, looking for Hex GUIDs that correlate with the name of the firmware that was scanned if it is not provided in the original EMBark report. This is a universal tool and will need to be tweaked for it to work with other systems.
+The goal of this script was to streamline the exploratory analysis of our EMBA scans, which there are close to 1600 scan reports, so that a research paper could be completed on Agentic LLM Analysis of cybersecurity data.
 
-The Grabbers are ordered in Marks, meaning mark one is the first attempt. Second mark is the second attempt, and so on.
+NOTE: I built this script to aid in our research of agentic workflows, and is incomplete due to obstacles in our research environment.
 
 
