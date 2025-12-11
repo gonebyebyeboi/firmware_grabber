@@ -6,19 +6,20 @@ from bs4 import BeautifulSoup as bs
 
 
 #Now getting into some global variables
-
 masterFilepaths = []
 
+# Common Firmware Image Extensions for the parser to look for
 extension = [".bin", ".zip",  ".hex", ".rar", ".udp", ".update", ".rom", ".iso", ".elf", ".dfu", ".bin_extract", ".tar.gz", ".sys", ".exe", ".dav"]
 #This is the path that stays the same for the index.html file
-###You will need to modify this for the code to work outside the DAC###
+###You will need to modify bp for the parser to work!!!###
 
-bp= "/home/daclocaladmin/Documents/Data_Analytics_I/Whole_Emba_Collection"
+bp= "Insert File Path Here"
 
 #this will contain all the file paths that align with the predefined path name
 #Some scans will deviate from this path, but I will come up with a way to get those as well.
 
 # three types in "other" scans
+# Note that this was proprietary to our work
 keenetic = []
 china = []
 ipcam = []
@@ -321,7 +322,7 @@ def p60Reader(paths):
 
 
   #Manual Block
-  test = '/home/daclocaladmin/Documents/Data_Analytics_I/Whole_Emba_Collection/bea92d9e4a89d5ef67d7c94df08de061/1725184502/html-report/p60_deep_extractor.html'
+  test = 'Insert individual file scan directory path here'
   with open(test, 'r', encoding='UTF-8', errors='replace') as f:
     contents = f.read()
     p60 = bs(contents, 'lxml')
